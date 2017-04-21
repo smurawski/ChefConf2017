@@ -97,7 +97,7 @@ code --install-extension Pendrica.Chef
 ### Set some platform agnostic settings
 
 * Open VS Code
-* Control+, (shortcut to open user settings)
+* Control + , (shortcut to open user settings)
 * Edit user settings
 
 ```
