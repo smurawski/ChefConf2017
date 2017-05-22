@@ -21,6 +21,19 @@ default['mwwfy']['alternate_password'] = 'P2ssw0rd!'
 
 ## Run commands as another user
 
+* In the editor, open .kitchen.local.yml 
+* Update the transport to:
+
+```
+transport:
+  name: winrm
+  username: 'ChefPowerShell'
+  password: 'P2ssw0rd!'
+  elevated: true
+  elevated_username: SYSTEM
+  elevated_password: ''
+```
+
 ### Using Mixlib::Shellout
 
 * In the editor, open ./recipes/default.rb
