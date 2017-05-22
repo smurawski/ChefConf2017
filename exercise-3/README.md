@@ -30,10 +30,10 @@ delivery local unit
 * Just under line 31, add
 
 ```
-    context 'file[c:\hello.txt' do
+    context 'file[c:\hello.txt]' do
       it 'sets Read for Everyone' do
         expect(chef_run).to create_file('c:\hello.txt').with(
-          rights: [{ permissions: :fullcontrol, principals: 'ChefPowerShell'},
+          rights: [{ permissions: :full_control, principals: 'ChefPowerShell'},
                    { permissions: :read, principals: 'Everyone' }]
         )
       end
@@ -72,7 +72,7 @@ file 'c:\hello.txt' do
   content "Chef's gonna reboot your server. Ha Ha."
   action :create
   notifies :reboot_now, 'reboot[Restarting for fun and profit]', :immediately
-  rights :fullcontrol, 'ChefPowerShell'
+  rights :full_control, 'ChefPowerShell'
   rights :read, 'Everyone'
 end
 ```

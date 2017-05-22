@@ -15,8 +15,8 @@ chef generate attribute . local
 * Add
 
 ```
-default['mwwfy']['alternate_user'] => 'ChefPowerShell'
-default['mmwfy']['alternate_password'] => 'P2ssw0rd!'
+default['mwwfy']['alternate_user'] = 'ChefPowerShell2'
+default['mwwfy']['alternate_password'] = 'P2ssw0rd!'
 ```
 
 ## Run commands as another user
@@ -65,6 +65,8 @@ kitchen converge
 * Add to the bottom of the recipe
 
 ```
+directory 'c:\ChefDemo'
+
 execute 'CMD as another user' do
   user node['mwwfy']['alternate_user']
   password node['mwwfy']['alternate_password']
@@ -122,6 +124,8 @@ kitchen converge
 ```
 
 ## Passing credentials into a powershell_script
+
+*THIS IS BROKEN, BUT COULD WORK IF I HAD A REMOTE SYSTEM TO TARGET*
 
 * In the editor, open ./recipes/default.rb
 * Add to the bottom of the recipe
