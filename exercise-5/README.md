@@ -6,6 +6,7 @@
 * In the PowerShell session:
 
 ```
+chef shell-init powershell | iex
 cd ~/chefconf2017/mwwfy
 chef generate attribute . local
 ```

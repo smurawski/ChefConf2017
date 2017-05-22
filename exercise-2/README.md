@@ -40,7 +40,7 @@ cp <PATH-TO-LOCAL-EXERCISES-FOLDER>/exercise-2/.kitchen.local.yml -destination .
 * Change line 27 to be the url for your assigned test machine (stock 2016 Windows Server image)
 
 ```
-      host: chefconf-<YOUR-ASSIGNED-NUMBER-HERE>.centralus.cloudapp.azure.com
+      host: chefconf-<YOUR-ASSIGNED-NUMBER-HERE>.southcentralus.cloudapp.azure.com
 ```
 
 ### Make sure Test-Kitchen can read our configuration files
@@ -110,8 +110,6 @@ end
 ## Verify
 
 ### Create our test
-
-
 
 * In your editor, create a file 'default_spec.rb' in the `test\smoke\default` folder
 * Replace the existing tests with
