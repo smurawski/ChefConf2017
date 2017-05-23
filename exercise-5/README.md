@@ -34,6 +34,25 @@ transport:
   elevated_password: ''
 ```
 
+
+### Create our alternate user
+* In the editor, open ./recipes/default.rb
+* Add to the bottom of the recipe
+
+```
+user node['mwwfy']['alternate_user']  do
+  comment 'another'
+  password node['mwwfy']['alternate_password']
+  action :create
+end
+```
+
+* In the PowerShell session:
+
+```
+kitchen converge
+```
+
 ### Using Mixlib::Shellout
 
 * In the editor, open ./recipes/default.rb
